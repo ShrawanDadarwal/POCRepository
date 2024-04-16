@@ -15,6 +15,10 @@ public class Employee {
     public ResponseEntity<?> getEmployee(@PathVariable("id") String id){
         return employeeInterFace.getEmployee(id);
     }
+    @GetMapping(value = "/test")
+    public ResponseEntity<?> getTest(){
+        return ResponseEntity.ok("Welcome to Hello World");
+    }
     @PostMapping(value = "/createEmployee")
     public ResponseEntity<?> createEmployee(@RequestBody EmployeePojo employee){
 
